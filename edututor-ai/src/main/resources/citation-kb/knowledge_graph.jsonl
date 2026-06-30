@@ -1,0 +1,3 @@
+{"subject": "Course", "predicate": "contains", "object": "Lesson", "source_keys": ["course-material"], "confidence": 0.82}
+{"subject": "Lesson", "predicate": "teaches", "object": "Concept", "source_keys": ["course-material"], "confidence": 0.82}
+{"subject": "Quiz", "predicate": "assesses", "object": "Concept", "source_keys": ["course-material"], "confidence": 0.82}

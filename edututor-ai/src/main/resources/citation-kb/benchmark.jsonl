@@ -1,0 +1,5 @@
+{"capability": "支持课程 RAG", "metric": "supported", "value": "yes", "evidence_source_keys": ["course-material"]}
+{"capability": "支持测验生成", "metric": "supported", "value": "yes", "evidence_source_keys": ["course-material"]}
+{"capability": "支持学习路径建议", "metric": "supported", "value": "yes", "evidence_source_keys": ["course-material"]}
+{"capability": "支持教材来源引用", "metric": "supported", "value": "yes", "evidence_source_keys": ["course-material"]}
+{"capability": "企业版支持班级/租户隔离", "metric": "supported", "value": "yes", "evidence_source_keys": ["course-material"]}

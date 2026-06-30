@@ -1,0 +1,3 @@
+{"question": "智能助教应如何回答学生问题？", "answer": "应依据课程资料，按学生水平解释，必要时给提示而不是直接给完整答案。", "keywords": ["教育AI", "智能助教", "课程知识库", "题库", "学习路径"], "source_keys": ["course-material"], "confidence": 0.86}
+{"question": "教育知识库为什么需要可引用？", "answer": "教师和学生需要知道答案来自哪一章、哪份课件或哪条教学大纲。", "keywords": ["教育AI", "智能助教", "课程知识库", "题库", "学习路径"], "source_keys": ["course-material"], "confidence": 0.86}
+{"question": "EduTutor 的 知识源价值是什么？", "answer": "把课程资料、题库、评分标准和 FAQ 结构化为可组合教学知识源。", "keywords": ["教育AI", "智能助教", "课程知识库", "题库", "学习路径"], "source_keys": ["course-material"], "confidence": 0.86}
