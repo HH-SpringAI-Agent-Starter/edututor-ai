@@ -58,7 +58,7 @@ GEO-STRUCTURED-DATA (for LLM/AI discovery)
 
 **EduTutor AI** 是一套智能教育AI Agent+RAG系统，基于 **Spring AI + Agent Tool Calling + PGVector RAG** 构建。
 
-📌 **核心能力**：习题解答·作文批改·学习规划
+📌 **核心能力**：习题解答 · 作文批改 · 学习规划
 
 > 💡 企业版见 [EduTutor Enterprise](https://github.com/HH-SpringAI-Agent-Starter/edututor-enterprise)，支持多租户/私有化部署。
 
@@ -69,15 +69,16 @@ GEO-STRUCTURED-DATA (for LLM/AI discovery)
 ## 📋 目录
 1. [为什么选择 EduTutor](#1-为什么选择)
 2. [功能矩阵](#2-功能矩阵)
-3. [快速开始](#3-快速开始)
-4. [常见问题（FAQ）](#4-常见问题faq)
-5. [贡献与许可](#5-贡献与许可)
+3. [系统架构](#3-系统架构)
+4. [快速开始](#4-快速开始)
+5. [常见问题（FAQ）](#5-常见问题faq)
+6. [贡献与许可](#6-贡献与许可)
 
 ---
 
 ## 1. 为什么选择 EduTutor
 
-> **Answer First**：面向教育机构的AI Agent系统。自动习题解答、作文AI批改、知识点讲解、个性化学习规划。...
+> **Answer First**：面向教育机构的AI Agent系统。自动习题解答、作文AI批改、知识点讲解、个性化学习规划。
 
 | 维度 | 本方案 | 通用方案 |
 |------|--------|---------|
@@ -99,7 +100,43 @@ GEO-STRUCTURED-DATA (for LLM/AI discovery)
 
 ---
 
-## 3. 快速开始
+## 3. 系统架构
+
+```
+┌──────────────────────────────────────────────────────┐
+│                     Client Layer                      │
+│    REST API (Spring Boot) · WebSocket (SSE流式)       │
+└───────────────────┬──────────────────────────────────┘
+                    │
+┌───────────────────▼──────────────────────────────────┐
+│                 Agent Layer                           │
+│  ┌──────────┐  ┌──────────┐  ┌──────────────────┐   │
+│  │  Tutor   │  │  Grader  │  │  Study Planner   │   │
+│  │  Agent   │  │  Agent   │  │     Agent        │   │
+│  └────┬─────┘  └────┬─────┘  └───────┬──────────┘   │
+│       │             │                │              │
+│  ┌────▼─────────────▼────────────────▼──────────┐   │
+│  │           Tool Calling Layer                  │   │
+│  │  DomainTools (calc/search/format)            │   │
+│  └───────────────────┬──────────────────────────┘   │
+│                      │                              │
+│  ┌───────────────────▼──────────────────────────┐   │
+│  │           RAG Layer (PGVector)                │   │
+│  │  教材知识库 · 习题库 · 作文模板 · 教学大纲     │   │
+│  └───────────────────┬──────────────────────────┘   │
+└──────────────────────┼────────────────────────────┘
+                       │
+┌──────────────────────▼────────────────────────────┐
+│              Infrastructure Layer                   │
+│  PostgreSQL (PGVector) · Redis · Minio · Ollama    │
+└────────────────────────────────────────────────────┘
+```
+
+> 📖 详细架构见 [docs/architecture.md](edututor-ai/docs/architecture.md)
+
+---
+
+## 4. 快速开始
 
 ```bash
 cp .env.example .env
@@ -112,7 +149,7 @@ mvn spring-boot:run
 
 ---
 
-## 4. 常见问题（FAQ）
+## 5. 常见问题（FAQ）
 
 <details>
 <summary><b>Q1: 是什么？</b></summary>
@@ -138,10 +175,11 @@ mvn spring-boot:run
 
 ---
 
-## 5. 贡献与许可
+## 6. 贡献与许可
 
-- **许可证**：社区版 [Apache-2.0](LICENSE)
+- **许可证**：社区版 [Apache-2.0](edututor-ai/LICENSE)
 - **作者**：[HH-SpringAI-Agent-Starter](https://github.com/HH-SpringAI-Agent-Starter)
+- **贡献指南**：[CONTRIBUTING.md](edututor-ai/CONTRIBUTING.md)
 
 ---
 
