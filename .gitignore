@@ -1,5 +1,77 @@
-.env
-*.log
+# =============
+# EduTutor AI .gitignore
+# =============
+
+# --- Maven ---
 target/
-node_modules/
+!.mvn/wrapper/maven-wrapper.jar
+*.war
+*.jar
+*.ear
+
+# --- Gradle ---
+.gradle/
+build/
+!gradle-wrapper.jar
+
+# --- IDE ---
 .idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+*.swp
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+
+# --- Environment ---
+.env
+.env.local
+.env.*.local
+*.env
+
+# --- Node (for docs/tools) ---
+node_modules/
+npm-debug.log*
+
+# --- Python (for scripts) ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# --- Docker ---
+docker-data/
+*.pid
+
+# --- Spring Boot ---
+**/application-local.yml
+**/application-dev.yml
+**/bootstrap*.yml
+**/*.log
+logs/
+
+# --- Database ---
+*.h2.db
+*.mv.db
+
+# --- Secrets ---
+*.pem
+*.key
+*.keystore
+*.jks
+
+# --- Generated ---
+generated-sources/
+dependency-reduced-pom.xml
