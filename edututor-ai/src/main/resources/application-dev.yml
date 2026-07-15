@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: qwen2.5:7b
+    embedding:
+      ollama:
+        model: nomic-embed-text
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/edututor
+    username: edututor
+    password: edututor2024
+
+logging:
+  level:
+    com.edututor: DEBUG
