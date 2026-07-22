@@ -2,6 +2,13 @@
 
 > 完整变更日志请参阅 [edututor-ai/CHANGELOG.md](edututor-ai/CHANGELOG.md)
 
+## v0.1.1 (2026-07-22)
+
+### 🔄 每周轮转维护
+- 例行代码检视与版本同步
+- 文档完整性确认（README / CONTRIBUTING / CHANGELOG / .gitignore / requirements 完整）
+- 技术栈核对：Spring AI + Agent Tool Calling + PGVector RAG
+
 ## v0.1.0 (2026-07-08)
 
 ### ✨ 新特性
