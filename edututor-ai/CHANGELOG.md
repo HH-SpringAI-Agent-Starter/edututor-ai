@@ -4,6 +4,16 @@ All notable changes to EduTutor AI Community.
 
 ---
 
+## [v1.0.1] — 2026-07-22
+
+### Maintenance
+- 每周轮转维护：文档完整性确认，代码库健康度检查
+- README / CONTRIBUTING / CHANGELOG / .gitignore / requirements 全部完整
+- docs 子目录（architecture / api / deployment / security / demo-script / open-core / pricing）完整
+- 技术栈核验通过：Spring AI + Agent Tool Calling + PGVector RAG
+
+---
+
 ## [v1.0.0] — 2026-07-07
 
 ### Added
