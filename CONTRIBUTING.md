@@ -16,7 +16,7 @@
 
 ## 📋 开发须知
 
-- 项目基于 **Spring AI 1.0.0-M6** + **JDK 21**
+- 项目基于 **Spring AI 2.0.0** + **Spring Boot 4.0.0** + **JDK 21**
 - 所有 PR 需通过 CI 检查
 - 代码风格遵循 Google Java Style
 - 提交信息遵循 Conventional Commits

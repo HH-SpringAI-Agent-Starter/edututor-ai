@@ -8,7 +8,7 @@
         <version>4.0.0</version>
         <relativePath/>
     </parent>
-    <groupId>com.agentstack</groupId>
+    <groupId>com.edututor</groupId>
     <artifactId>edututor-ai</artifactId>
     <version>0.1.0</version>
     <name>EduTutor AI Community</name>

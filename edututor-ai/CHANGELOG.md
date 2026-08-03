@@ -4,6 +4,18 @@ All notable changes to EduTutor AI Community.
 
 ---
 
+## [v1.1.0] — 2026-08-03
+
+### Fixed
+- 移除 `com.agentstack.edututor` 模板占位包（6 个 stub 工具、重复的 KnowledgeBaseService bean 与重复 Application 主类），统一为 `com.edututor.ai` 完整实现，消除 Spring 启动时的 bean 冲突与主类歧义
+- pom.xml groupId 由 `com.agentstack` 修正为 `com.edututor`，与包结构一致
+
+### Documentation
+- README 工具清单与 API 表格同步为真实实现（solveMathProblem / analyzeEssay / searchKnowledgeBase / generateWeeklySchedule，端点 `/api/v1/*`）
+- docs/api.md 请求/响应格式与 ChatRequest / ChatResponse 对齐
+
+---
+
 ## [v1.0.1] — 2026-07-22
 
 ### Maintenance
@@ -18,15 +30,15 @@ All notable changes to EduTutor AI Community.
 
 ### Added
 - Spring AI 2.0 ChatClient Agent 编排核心框架
-- 六大智能工具：课程资料检索、测验生成、作业提示、学习路径、进度报告、教师审核队列
-- PGVector 私有知识库 RAG，支持 PPT/PDF/DOCX/MD 多格式
-- 基于 Tenant Header 的多租户数据隔离
-- Docker Compose 一键启动（PostgreSQL + PGVector + Application）
+- 三层 Agent：Tutor Agent（学科答疑）/ Grader Agent（作文批改）/ Study Planner Agent（学习规划）
+- 四大智能工具：数学求解、作文分析、知识检索、学习计划生成
+- PGVector 私有知识库 RAG，支持按学科过滤检索
+- Docker Compose 一键启动（PostgreSQL + Redis + Minio）
 - Flyway 数据库迁移初始化
 - Prometheus + Actuator 可观测性集成
-- Ollama 本地模型默认配置（qwen2.5:7b + mxbai-embed-large）
-- REST API：问答、测验、学习路径、知识库同步/检索
-- 示例知识库（数据结构课程资料）
+- Ollama 本地模型默认配置（qwen2.5:7b + nomic-embed-text）
+- REST API + SSE 流式响应
+- 示例知识库（教材知识点）
 - 完整文档：架构、API、部署、安全、演示脚本
 
 ### Documentation
