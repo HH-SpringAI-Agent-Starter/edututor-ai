@@ -52,3 +52,11 @@ All notable changes to EduTutor AI Community.
 - docs/demo-script.md — 演示脚本
 - docs/pricing.md — Open Core 定价模型
 - docs/open-core.md — 开源版与企业版差异
+
+
+## v0.2.1 (2026-08-12)
+
+### 每周轮转维护
+- 例行代码与文档完整性检查（README / CONTRIBUTING / CHANGELOG / .gitignore / requirements / LICENSE 齐全）
+- 技术栈核对：Spring AI 2.0.0 + Spring Boot 4.0.0 + JDK 21 + PGVector RAG
+- 文档结构确认：根目录 + edututor-ai/ 双层文档同步
