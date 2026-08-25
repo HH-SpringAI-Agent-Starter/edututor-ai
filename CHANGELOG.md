@@ -2,7 +2,16 @@
 
 > 完整变更日志请参阅 [edututor-ai/CHANGELOG.md](edututor-ai/CHANGELOG.md)
 
+## v0.2.1 (2026-08-25)
+
+### 🔄 每周轮转维护
+- 修复向量维度不一致：VectorStoreConfig 硬编码 1536 维 与 nomic-embed-text（768 维）不匹配
+- 同步 V1__init_vector_store.sql 中 embedding vector(1536) → vector(768)
+- .env.example 嵌入模型 mxbai-embed-large → nomic-embed-text，与 application.yml 对齐
+- 文档完整性确认（README / CONTRIBUTING / CHANGELOG / .gitignore / requirements 完整）
+
 ## v0.2.0 (2026-08-03)
+
 
 ### 🔄 每周轮转维护
 - 移除模板占位代码包 `com.agentstack.edututor`（stub 工具与重复 bean），统一为 `com.edututor.ai` 完整实现
