@@ -19,7 +19,7 @@ public class VectorStoreConfig {
                 .jdbcTemplate(new JdbcTemplate(dataSource))
                 .vectorTableName("knowledge_vectors")
                 .schemaName("public")
-                .dimensions(1536)
+                .dimensions(768)
                 .distanceType(PgVectorStore.PgDistanceType.COSINE_DISTANCE)
                 .initializeSchema(true)
                 .build();
